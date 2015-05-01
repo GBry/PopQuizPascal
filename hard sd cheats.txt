@@ -1,0 +1,6 @@
+easter eggs of hard and sudden death:
+1. St. Louis reference
+2. Substitute User-Question Master mode:
+	upon written press <enter> three times to continue, type
+	a. Type name _Executor_ to view answers
+	b. type ter_something (look for answers at \data) to change which ImageName to terminate upon 0 lives

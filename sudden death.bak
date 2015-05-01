@@ -1,0 +1,430 @@
+program hard;
+
+uses crt,sysutils,Process;
+label gmo,stt;
+
+var
+s,l,p,t:integer;
+ji,ro,lu,pat,mo,nem,pi,wo,so,se,sel,rol,tel,pal,lil,nel,pil,wol,sol,rop, pass, bypass : string;
+jiu,rou,luu,patu,mou,nemu,piu,wou,sou,seu,selu,rolu,telu,palu,lilu,nelu,pilu,wolu,solu,ropu,admin : string;
+RunProgram: TProcess;
+
+begin
+										goto stt;
+										gmo:
+											begin
+												RunProgram := TProcess.Create(nil);
+												RunProgram.CommandLine := 'data\sd.bat';
+												RunProgram.Execute;
+												RunProgram.Free;
+											end;
+										stt:writeln('In sudden death mode, the questions are as same as Hard mode');
+										writeln('That`s it? What`s the catch?');
+										writeln('Press Enter to Continue');
+										readln;
+										writeln('You don`t get to skip anything');
+										writeln('That`s it? Nothing else?');
+										writeln('Press Enter again to continue');
+										readln;
+										writeln('Hey, SUDDEN DEATH. You only get 1 life');
+										writeln('Before we start, please save everything, in case anything goes wrong');
+
+
+									s := 9;
+									l:= 1 ;
+									p:= 0;
+									ji:='a';
+									ro:='c';
+									lu:='d';
+									pat:='a';
+									mo:='c';
+									nem:='c';
+									pi:='a';
+									wo:='d';
+									so:='a';
+									se:='b';
+									sel:='d';
+									rol:='d';
+									tel:='a';
+									pal:='e';
+									lil:='a';
+									nel:='a';
+									pil:='d';
+									wol:='b';
+									sol:='c';
+									rop:='c';
+
+									clrscr;
+
+									//instructions
+									writeln ('This is HARD mode. If you haven`t got time to read the instructions or try the easier difficulty levels, here are the rules');
+									writeln;
+									writeln ('You got ONE life. You may skip for free three times. After three times, skipping will reduce your point by 3 per skip.');
+									writeln;
+									writeln ('Each correct answer yields 5 points. The total score is 100. There are 5 choice per question');
+									writeln;
+									writeln ('Press <Enter> three times to continue, or type menu to go back to main menu');
+									readln (admin);
+									if admin = 'qm_decrypt' then
+									writeln ('Enter QM ID')
+									else
+									if admin = 'menu' then goto back;
+									readln (pass);
+									if pass = '_Executor_' then
+									writeln (ji,ro,lu,pat,mo,nem,pi,wo,so,se,sel,rol,tel,pal,lil,nel,pil,wol,sol,rop) else;
+									readln;
+									
+									
+									      //questions
+											clrscr;
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;
+											writeln ('1.	Patung Liberty merupakan pemberian dari Negara...');
+											writeln ('      a.	Perancis');
+											writeln ('      b.	Inggris');
+											writeln ('      c.	Kanada');
+											writeln ('      d.	India');
+											writeln ('      e.	Russia');
+											writeln ('		f.  Skip');
+											readln (jiu);
+											if (jiu = ji) then p:=(p+5) else
+									                if (jiu = 'f') then s:=(s-3) else      l:=(l-1) ;
+													if l=0 then goto gmo;
+									                clrscr;
+									
+									
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;
+									writeln ('2.	Shortcut untuk mengcopy adalah control/command + ...');
+											writeln ('      a.	X');
+											writeln ('      b.	V');
+											writeln ('      c.	C');
+											writeln ('      d.	N');
+											writeln ('      e.	O');
+											writeln ('		f.  Skip');
+											readln (rou);
+											if (rou = ro) then p:=(p+5) else
+									                if (rou = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;
+									
+									
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;				
+									writeln ('3.	Besaran kecepatan suara adalah...');
+											writeln ('      a.	Kelvin');
+											writeln ('      b.	Desibel');
+											writeln ('      c.	CC');
+											writeln ('      d.	Mach');
+											writeln ('      e.	Warp');
+											writeln ('		f.  Skip');
+											readln (luu);
+											if (luu = lu) then p:=(p+5) else
+									                if (luu = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;		
+									
+															
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;				
+									writeln ('4.	Dimana 1 satuan kecepatan suara sama dengan ... m/s');
+											writeln ('      a.	340');
+											writeln ('      b.	1000');
+											writeln ('      c.	1200');
+											writeln ('      d.	150.000');
+											writeln ('      e.	1.500.000');
+											writeln ('		f.  Skip');
+											readln (patu);
+											if (patu = pat) then p:=(p+5) else
+									                if (patu = 'f') then s:=(s-3) else      l:=(l-1) ;
+													if l=0 then goto gmo;
+									                clrscr;	
+									
+											writeln	('Lives : ', l);	
+											writeln ('Points : ', p);
+											writeln;				
+									writeln ('5.	ICBM adalah singkatan dari...');
+											writeln ('      a.	Industrial Camera Boolean Machine');
+											writeln ('      b.	Integrated Circuit Business Management');
+											writeln ('      c.	InterContinental Ballistic Missile');
+											writeln ('      d.	I See Broadcast Message');
+											writeln ('      e.	Indonesian Cosmodrome Bombing Mission');
+											writeln ('	f.  Skip');
+											readln (mou);
+											if (mou = mo) then p:=(p+5) else
+									                if (mou = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;
+									
+									
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;
+									writeln ('6.	Samsung, selain merupakan produsen komputer dan gadget, juga memproduksi...');
+											writeln ('      a.	Roket');
+											writeln ('      b.	Pesawat');
+											writeln ('      c.	Kapal');
+											writeln ('      d.	Mobil');
+											writeln ('      e.	Kereta Api');
+											writeln ('		f.  Skip');
+											readln (nemu);
+											if (nemu = nem) then p:=(p+5) else
+									                if (nemu = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;	
+											
+									
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;				
+									writeln ('7.	"Art of War" adalah buku karangan...');
+											writeln ('      a.	Tsun Szu');
+											writeln ('      b.	Xi-Jin Ping');
+											writeln ('      c.	Adolf Hitler');
+											writeln ('      d.	Julius Caesar');
+											writeln ('      e.	Ban Ki-Moon');
+											writeln ('		f.  Skip');
+											readln (piu);
+											if (piu = pi) then p:=(p+5) else
+									                if (piu = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;
+													
+													
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;				
+									writeln ('8.	Aktor pemeran Mr. Spock dalam serian TV "Star Trek" yang meninggal tahun 2015 adalah...');
+											writeln ('      a.	Idris Elba');
+											writeln ('      b.	Justin Bieber');
+											writeln ('      c.	Olga Syahputra');
+											writeln ('      d.	Leonard Nimoy');
+											writeln ('      e.	Zachary Quinto');
+											writeln ('		f.  Skip');
+											readln (wou);
+											if (wou = wo) then p:=(p+5) else
+									                if (wou = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;	
+									
+													
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;				
+									writeln ('9.	Orang yang pernah menjadi presiden Indonesia dan menjabat sebagai CEO Meserschmitt Bolkow-Blohm sampai sekarang adalah');
+											writeln ('      a.	B.J Habibie');
+											writeln ('      b.	Soekarno');
+											writeln ('      c.	SBY');
+											writeln ('      d.	Megawati');
+											writeln ('      e.	Aloysius Alfa');
+											writeln ('		f.  Skip');
+											readln (sou);
+											if (sou = so) then p:=(p+5) else
+									                if (sou = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;	
+									
+													
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;				
+									writeln ('10.	UFO merupakan singkatan dari...');
+											writeln ('      a.	United Flying Order');
+											writeln ('      b.	Unidentified Flying Object');
+											writeln ('      c.	Unidentified Furry Ocelot');
+											writeln ('      d.	Utility Firing On Site');
+											writeln ('      e.	Kereta Api');
+											writeln ('		f.  Skip');
+											readln (seu);
+											if (seu = se) then p:=(p+5) else
+									                if (seu = 'f') then s:=(s-3) else      l:=(l-1);
+									                if l=0 then goto gmo;
+													clrscr;	
+									
+													
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;
+									writeln ('11.	Nama pesawat ulang - alik milik Russia adalah...');
+											writeln ('      a.	Kursk');
+											writeln ('      b.	Mriya');
+											writeln ('      c.	Domodedovo');
+											writeln ('      d.	Buran');
+											writeln ('      e.	Baikonur');
+											writeln ('		f.  Skip');
+											readln (selu);
+											if (selu = sel) then p:=(p+5) else
+									                if (selu = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;
+													
+													
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;				
+									writeln ('12.	Tetra dalam kimia berarti...');
+											writeln ('      a.	1');
+											writeln ('      b.	2');
+											writeln ('      c.	3');
+											writeln ('      d.	4');
+											writeln ('      e.	5 ');
+											writeln ('		f.  Skip');
+											readln (rolu);
+											if (rolu = rol) then p:=(p+5) else
+									                if (rolu = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;	
+											
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;
+									writeln ('13.	Hepta dalam kimia berarti...');
+											writeln ('      a.	5');
+											writeln ('      b.	6');
+											writeln ('      c.	7');
+											writeln ('      d.	8');
+											writeln ('      e.	9 ');
+											writeln ('		f.  Skip');
+											readln (telu);
+											if (telu = tel) then p:=(p+5) else
+									                if (telu = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;	
+									
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;				
+									writeln ('14.	100% sama dengan...');
+											writeln ('      a.	100/10');
+											writeln ('      b.	3/4');
+											writeln ('      c.	5/6');
+											writeln ('      d.	2/8');
+											writeln ('      e.	490/490');
+											writeln ('		f.  Skip');
+											readln (palu);
+											if (palu = pal) then p:=(p+5) else
+									                if (palu = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;	
+											
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;				
+									writeln ('15.	VOC (jaman kolonial Belanda) singkatan dari...');
+											writeln ('      a.	Veerenigde Oost Indische Compagnie');
+											writeln ('      b.	Vitium Organicum Cordis');
+											writeln ('      c.	Volatile Organic Compound');
+											writeln ('      d.	Volt Current');
+											writeln ('      e.	Vile Orbit Creature');
+											writeln ('		f.  Skip');
+											readln (lilu);
+											if (lilu = lil) then p:=(p+5) else
+									                if (lilu = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;
+									
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;				
+									writeln ('16.	Rolls Royce adalah produsen mobil dan mesin jet dari...');
+											writeln ('      a.	Inggris');
+											writeln ('      b.	Perancis');
+											writeln ('      c.	Malaysia');
+											writeln ('      d.	Amerika');
+											writeln ('      e.	Jerman');
+											writeln ('		f.  Skip');
+											readln (nelu);
+											if (nelu = nel) then p:=(p+5) else
+									                if (nelu = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;
+									
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;
+									writeln ('17.	Sebelum menjadi produsen handphone, Nokia memproduksi...');
+											writeln ('      a.	Pesawat');
+											writeln ('      b.	Nata De Coco');
+											writeln ('      c.	Baju');
+											writeln ('      d.	Pulp (Bubur Kertas)');
+											writeln ('      e.	ATK');
+											writeln ('		f.  Skip');
+											readln (pilu);
+											if (pilu = pil) then p:=(p+5) else
+									                if (pilu = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;	
+									
+													
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;
+									writeln ('18.	Youtube adalah milik...');
+											writeln ('      a.	Microsoft');
+											writeln ('      b.	Google');
+											writeln ('      c.	Sinlui WEbsitE Team');
+											writeln ('      d.	Apple');
+											writeln ('      e.	Samsung ');
+											writeln ('		f.  Skip');
+											readln (wolu);
+											if (wolu = wol) then p:=(p+5) else
+									                if (wolu = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;	
+																						
+											
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;
+									writeln ('19.	Instagram adalah milik...');
+											writeln ('      a.	St. Louis');
+											writeln ('      b.	Tumblr');
+											writeln ('      c.	Facebook');
+											writeln ('      d.	Naver');
+											writeln ('      e.	Imgur ');
+											writeln ('		f.  Skip');
+											readln (solu);
+											if (solu = sol) then p:=(p+5) else
+									                if (solu = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;	
+																						
+											writeln	('Lives : ', l);
+											writeln ('Points : ', p);
+											writeln;				
+									writeln ('20.	NEWS ternyata merupakan singkatan dari...');
+											writeln ('      a.	New Entertainment Weather System');
+											writeln ('      b.	Not End With Sports');
+											writeln ('      c.	North East South West');
+											writeln ('      d.	Nerd End With Sauce');
+											writeln ('      e.	NEW System');
+											writeln ('		f.  Skip');
+											readln (ropu);
+											if (ropu = rop) then p:=(p+5) else
+									                if (ropu = 'f') then s:=(s-3) else      l:=(l-1);
+													if l=0 then goto gmo;
+									                clrscr;	
+													
+									
+									
+									//end of questions
+									
+									
+									//closing
+									
+									t:=p+s;
+									if s>0 then
+									writeln ('That is the end of HARD mode questionnaire. Your total score is is ', p, ' . Congratulations!') else
+									if s<0 then writeln ('That is the end of HARD mode questionnaire, your total score should be ', p, ', but given your skip points is ', s, ', your final score is ' ,(t));
+									if t<75 then writeln ('Given your final score is BELOW 75 (the min. req) you should repeat the questionnaire');
+									readln;
+									
+									writeln ('Game Over')
+									;
+									back : writeln ('Press <Enter> to go back to main menu');
+									readln;
+									end.

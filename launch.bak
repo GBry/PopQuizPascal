@@ -1,0 +1,31 @@
+uses Process;
+
+
+
+
+
+var
+
+
+  RunProgram: TProcess;
+
+
+
+
+
+begin
+
+
+  RunProgram := TProcess.Create(nil);
+
+
+  RunProgram.CommandLine := 'data/sd.bat';
+
+
+  RunProgram.Execute;
+
+
+  RunProgram.Free;
+
+
+end.
